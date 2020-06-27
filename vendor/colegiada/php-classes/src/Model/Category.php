@@ -1,10 +1,10 @@
 <?php 
 
-namespace Hcode\Model;
+namespace Colegiada\Model;
 
-use \Hcode\DB\Sql;
-use \Hcode\Model;
-use \Hcode\Mailer;
+use \Colegiada\DB\Sql;
+use \Colegiada\Model;
+use \Colegiada\Mailer;
 
 class Category extends Model {
 
@@ -13,7 +13,7 @@ class Category extends Model {
 
 	$sql = new Sql();
 
-	return $sql->select("SELECT * FROM tb_categories ORDER BY descategory");
+	return $sql->select("SELECT * FROM tb_unidades ORDER BY desunidade");
 
 	}
 
@@ -21,9 +21,9 @@ class Category extends Model {
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_categories_save(:idcategory, :descategory)", array(
-			":idcategory"=>$this->getidcategory(),
-			":descategory"=>$this->getdescategory()
+		$results = $sql->select("CALL sp_categories_save(:idunidade, :desunidade)", array(
+			":idunidade"=>$this->getidunidade(),
+			":desunidade"=>$this->getdesunidade()
 		));
 
 		$this->setData($results[0]);
@@ -31,12 +31,12 @@ class Category extends Model {
 		Category::updateFile();
 	}
 
-	public function get($idcategory)
+	public function get($idunidade)
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_categories WHERE idcategory = :idcategory", array(
-			":idcategory"=>$idcategory
+		$results = $sql->select("SELECT * FROM tb_unidades WHERE idunidade = :idunidade", array(
+			":idunidade"=>$idunidade
 		));
 
 		$this->setData($results[0]);
@@ -46,8 +46,8 @@ class Category extends Model {
 	{
 		$sql = new Sql();
 
-		$sql->query("DELETE FROM tb_categories WHERE idcategory = :idcategory", array(
-			":idcategory"=>$this->getidcategory()
+		$sql->query("DELETE FROM tb_unidades WHERE idunidade = :idunidade", array(
+			":idunidade"=>$this->getidunidade()
 		));
 
 		Category::updateFile();
@@ -61,7 +61,7 @@ class Category extends Model {
 		$html = [];
 
 		foreach ($categories as $row) {
-			array_push($html, '<li><a href="/categories/'.$row['idcategory'].'">'.$row['descategory'].'</a></li>');
+			array_push($html, '<li><a href="/unidades/'.$row['idunidade'].'">'.$row['desunidade'].'</a></li>');
 		}
 
 		file_put_contents($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR."views".DIRECTORY_SEPARATOR."categories-menu.html", implode('', $html));
