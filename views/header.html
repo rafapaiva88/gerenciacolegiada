@@ -257,10 +257,10 @@ desired effect
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="/users"><i class="fa fa-users"></i> <span>Usuários</span></a></li>
-        <li><a href="/unidades"><i class="fa fa-link"></i> <span>Unidades</span></a></li>
-        <li><a href="/admin/products"><i class="fa fa-link"></i> <span>Produtos</span></a></li>
+        <li><a href="/unidades"><i class="fa fa-university"></i> <span>Unidades</span></a></li>
+        <li><a href="/admin/products"><i class="fa fa-pencil"></i> <span>Aplicações</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+          <a href="#"><i class="fa fa-print"></i> <span>Impressão</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
