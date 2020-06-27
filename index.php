@@ -1,16 +1,17 @@
-<?php 
+<?php
+session_start();
 
 require_once ("vendor/autoload.php");
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+use \Colegiada\Page;
+
+$app = new Slim();
 
 $app->config('debug', true);
 
-$app->get('/', function(){
-
-	echo "ok";
-
-});
+require_once ("login.php");
+require_once ("admin-users.php");
 
 $app->run();
 

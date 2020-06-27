@@ -6,11 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Slim\\Tests\\' => array($vendorDir . '/slim/slim/tests'),
-    'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
-    'Psr\\Http\\Server\\' => array($vendorDir . '/psr/http-server-handler/src', $vendorDir . '/psr/http-server-middleware/src'),
-    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
-    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
-    'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
     'Colegiada\\' => array($vendorDir . '/colegiada/php-classes/src'),
 );

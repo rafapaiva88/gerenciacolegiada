@@ -6,26 +6,7 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit403847ba5ee000a0e1f9a846b04f420e
 {
-    public static $files = array (
-        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'S' => 
-        array (
-            'Slim\\Tests\\' => 11,
-            'Slim\\' => 5,
-        ),
-        'P' => 
-        array (
-            'Psr\\Http\\Server\\' => 16,
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Container\\' => 14,
-        ),
-        'F' => 
-        array (
-            'FastRoute\\' => 10,
-        ),
         'C' => 
         array (
             'Colegiada\\' => 10,
@@ -33,32 +14,6 @@ class ComposerStaticInit403847ba5ee000a0e1f9a846b04f420e
     );
 
     public static $prefixDirsPsr4 = array (
-        'Slim\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/slim/slim/tests',
-        ),
-        'Slim\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/slim/slim/Slim',
-        ),
-        'Psr\\Http\\Server\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-server-handler/src',
-            1 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'Psr\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
-        'FastRoute\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
-        ),
         'Colegiada\\' => 
         array (
             0 => __DIR__ . '/..' . '/colegiada/php-classes/src',
@@ -66,6 +21,13 @@ class ComposerStaticInit403847ba5ee000a0e1f9a846b04f420e
     );
 
     public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Slim' => 
+            array (
+                0 => __DIR__ . '/..' . '/slim/slim',
+            ),
+        ),
         'R' => 
         array (
             'Rain' => 
